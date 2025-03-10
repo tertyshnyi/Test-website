@@ -198,5 +198,119 @@
 }
 
 .full-menu .menu-container {
-  
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.full-menu .menu-container .image-item {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.full-menu .menu-container .image-item .image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  max-width: 200px;
+  min-width: 40px;
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item .image-title {
+  text-align: left;
+  flex: 1;
+}
+
+.full-menu .menu-container .image-item .image-content .image-link {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-gold-color);
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+.full-menu .menu-container .image-item .image-content .image-link .image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.full-menu .menu-container .image-item .image-content .image-link:hover .image {
+  filter: grayscale(0%);
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item .image-label {
+  text-align: right;
+  flex: 1;
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item .line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(198, 198, 198);
+  border-radius: 4px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item .line::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60%;
+  height: 100%;
+  background-color: var(--primary-gold-color);
+  border-radius: 4px;
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item h6 {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-black-color);
+}
+
+.full-menu .menu-container .image-item .image-content .img-info-item p {
+  margin: 0;
+  font-size: 10px;
+  padding: 0;
+  color: var(--primary-gold-color);
+}
+
+@media (max-width: 500px) {
+  .navbar .nav-list li{
+    display: none;
+  }
+  .navbar .nav-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .full-menu .menu-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .full-menu {
+    left: -100%;
+    width: 100%;
+    height: 100%;
+  }
 }

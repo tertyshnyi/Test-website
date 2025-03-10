@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./CTA.css";
 import MenuIcon from "../../components/MenuIcon";
 import Ornament from "../../components/Ornament";
@@ -56,6 +56,31 @@ const CTA: React.FC = () => {
     }
   };
 
+  const ctaInfoRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    if (ctaInfoRef.current) {
+      observer.observe(ctaInfoRef.current);
+    }
+
+    return () => {
+      if (ctaInfoRef.current) {
+        observer.unobserve(ctaInfoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="cta">
       <div className="container">
@@ -66,7 +91,7 @@ const CTA: React.FC = () => {
           <h6>LEONIDES</h6>
           <Ornament />
         </div>
-        <div className="cta-info">
+        <div className="cta-info" ref={ctaInfoRef}>
           <p>ADDRESA <em>LEVOCSKA 5, PRESOV, 080 01</em></p>
           <p>TELEFON <em>+421 905 181 972</em></p>
           <p>MESTO <em>PRESOV / SLOVAKIA</em></p>

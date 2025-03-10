@@ -5,24 +5,32 @@ import MenuIcon from "../../components/MenuIcon";
 
 const imagesData = [
   {
-    src: '/elements/assets/menu/menu-need-1.jpg',
-    alt: 'DETI',
-    title: 'DETI',
+    src: "/elements/assets/menu/menu-need-2.jpg",
+    alt: "O SPOLOCNOSTI",
+    title: "O SPOLOCNOSTI",
+    to: "about",
+    label: "01",
   },
   {
-    src: '/elements/assets/menu/menu-need-2.jpg',
-    alt: 'BYVANIE',
-    title: 'BYVANIE',
+    src: "/elements/assets/menu/menu-need-2.jpg",
+    alt: "KARIERA",
+    title: "KARIERA",
+    to: "careers",
+    label: "02",
   },
   {
-    src: '/elements/assets/menu/menu-need-3.jpg',
-    alt: 'SPORENIE',
-    title: 'SPORENIE',
+    src: "/elements/assets/menu/menu-need-2.jpg",
+    alt: "POTREBA LUDI",
+    title: "POTREBA LUDI",
+    to: "requirements",
+    label: "03",
   },
   {
-    src: '/elements/assets/menu/menu-need-4.jpg',
-    alt: 'DOCHODOK',
-    title: 'DOCHODOK',
+    src: "/elements/assets/menu/menu-need-2.jpg",
+    alt: "KONTAKT",
+    title: "KONTAKT",
+    to: "cta",
+    label: "04",
   },
 ];
 
@@ -34,7 +42,7 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       if (menuOpen) return;
 
-      const sections = ["menu", "about", "careers", "cta"];
+      const sections = ["01", "02", "03", "04"];
       let foundSection = "";
 
       sections.forEach((section) => {
@@ -59,11 +67,11 @@ const Navbar: React.FC = () => {
     <>
       <nav className={`navbar ${menuOpen ? "hidden" : ""}`}>
         <ul className="nav-list">
-          <li className={activeSection === "menu" ? "active" : ""}>
-            <Link to="menu" smooth={true} duration={300}>01</Link>
+          <li className={activeSection === "01" ? "active" : ""}>
+            <Link to="about" smooth={true} duration={300}>01</Link>
           </li>
-          <li className={activeSection === "about" ? "active" : ""}>
-            <Link to="about" smooth={true} duration={300}>02</Link>
+          <li className={activeSection === "02" ? "active" : ""}>
+            <Link to="careers" smooth={true} duration={300}>02</Link>
           </li>
 
           <li className="logo" onClick={() => setMenuOpen(true)}>
@@ -71,10 +79,10 @@ const Navbar: React.FC = () => {
             <MenuIcon className="custom-menu-icon"/>
           </li>
 
-          <li className={activeSection === "careers" ? "active" : ""}>
-            <Link to="careers" smooth={true} duration={300}>03</Link>
+          <li className={activeSection === "03" ? "active" : ""}>
+            <Link to="requirements" smooth={true} duration={300}>03</Link>
           </li>
-          <li className={activeSection === "cta" ? "active" : ""}>
+          <li className={activeSection === "04" ? "active" : ""}>
             <Link to="cta" smooth={true} duration={300}>04</Link>
           </li>
         </ul>
@@ -89,24 +97,26 @@ const Navbar: React.FC = () => {
         </button>
         <div className="menu-container">
           {imagesData.map((image, index) => (
-            <div
-              key={index}
-              className="image-item"
-            >
-              <div className="image-header">
-                <h3>{image.title}</h3>
-                <div className="line"></div>
+            <div key={index} className="image-item">
+              <div className="image-content">
+                <Link
+                  to={image.to}
+                  smooth={true}
+                  duration={300}
+                  onClick={() => setMenuOpen(false)}
+                  className="image-link"
+                >
+                  <img src={image.src} alt={image.alt} className="image" />
+                </Link>
+                <div className="img-info-item">
+                  <p className="image-label">{image.label}</p>
+                  <div className="line"></div>
+                  <h6 className="image-title">{image.title}</h6>
+                </div>
               </div>
-              <img src={image.src} alt={image.alt} className="image" />
             </div>
           ))}
         </div>
-        <ul>
-          <li><Link to="menu" smooth={true} duration={300} onClick={() => setMenuOpen(false)}>Menu</Link></li>
-          <li><Link to="about" smooth={true} duration={300} onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="careers" smooth={true} duration={300} onClick={() => setMenuOpen(false)}>Careers</Link></li>
-          <li><Link to="cta" smooth={true} duration={300} onClick={() => setMenuOpen(false)}>Contact</Link></li>
-        </ul>
       </div>
     </>
   );

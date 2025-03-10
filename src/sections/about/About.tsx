@@ -60,7 +60,7 @@ const About: React.FC = () => {
         </div>
         <div className="about-info">
           <div className="about-info-imgs">
-          {imagesData.map((image, index) => (
+            {imagesData.map((image, index) => (
               <div
                 key={index}
                 className="image-item"
@@ -72,6 +72,12 @@ const About: React.FC = () => {
                   <h3>{image.title}</h3>
                   <div className="line"></div>
                 </div>
+                <img
+                  src="/elements/images/triangle.svg"
+                  alt="Triangle top"
+                  className="svg-image"
+                />
+
                 <img src={image.src} alt={image.alt} className="image" />
               </div>
             ))}

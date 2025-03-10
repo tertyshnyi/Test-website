@@ -33,6 +33,7 @@ const imagesData = [
 
 const requirementsData = [
   {
+    number: 'I.',
     title: 'DETI',
     content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
             non vero odio atque totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
@@ -43,6 +44,7 @@ const requirementsData = [
             voluptates, corrupti sint nemo unde suscipit expedita.`
   },
   {
+    number: 'II.',
     title: 'BYVANIE',
     content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
             non vero odio atque totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
@@ -53,6 +55,7 @@ const requirementsData = [
             voluptates, corrupti sint nemo unde suscipit expedita.`
   },
   {
+    number: 'III.',
     title: 'BEZUCELOVE SPOJENIE',
     content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
             non vero odio atque totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
@@ -63,6 +66,7 @@ const requirementsData = [
             voluptates, corrupti sint nemo unde suscipit expedita.`
   },
   {
+    number: 'IV.',
     title: 'DOCHODOK',
     content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
             non vero odio atque totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
@@ -173,11 +177,12 @@ const Requirements: React.FC = () => {
               Optio, nihil. Quisquam quas inventore non vero odio atque totam quam perspiciatis, maiores recusandae alias 
               voluptates, corrupti sint nemo unde suscipit expedita.
             </em>
-            {requirementsData.map((section, index) => (
-                <div key={index}>
-                    <h3>{section.title}</h3>
-                    <p>{section.content}</p>
-                </div>
+            {requirementsData.map((item, index) => (
+              <div className="requirement" key={index}>
+                <span className="numbering">{item.number}</span>
+                <h2>{item.title}</h2>
+                <p>{item.content}</p>
+              </div>
             ))}
           </div>
         </div>
