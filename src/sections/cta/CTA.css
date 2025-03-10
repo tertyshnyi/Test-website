@@ -1,0 +1,194 @@
+@import '../../styles/variables.css';
+
+#cta {
+  height: auto;
+  background-image: 
+    url('/public/elements/images/bg-contact.svg'),
+    url('/public/elements/images/bg-black.svg');
+  background-size: cover, auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#cta .container {
+  position: relative;
+  margin-top: 11%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cta .container .cta-header {
+  width: 20%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#cta .container .cta-header h1,
+#cta .container .cta-header h6 {
+  z-index: 1;
+}
+
+#cta .container .cta-header .cta-header-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+  
+#cta .container .cta-header h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-black-color);
+}
+  
+#cta .container .cta-header h6 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  color: var(--primary-black-color);
+}
+
+#cta .container .cta-info {
+  width: 70%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cta .container .cta-info p {
+  color: var(--primary-black-color);
+}
+
+#cta .container .cta-info p em {
+  color: var(--primary-gold-color);
+}
+
+#cta .container .cta-info .line {
+  width: 50px;
+  margin-bottom: 10px;
+  height: 4px;
+  border-color: var(--primary-gold-color);
+}
+
+#cta .container .cta-info .cta-form {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  width: 100%;
+}
+
+#cta .container .cta-info .cta-form .form-group-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#cta .container .cta-info .cta-form .form-group-left .form-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+#cta .container .cta-info .cta-form .form-group {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+
+#cta .container .cta-info .cta-form .form-group-left .form-group input,
+#cta .container .cta-info .cta-form .form-group textarea {
+  padding: 10px;
+  border: 2px solid var(--primary-gold-color);
+  background-color: transparent;
+  color: var(--primary-black-color);
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+#cta .container .cta-info .cta-form .form-group-left .form-group input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: auto;
+}
+
+#cta .container .cta-info .cta-form .form-group textarea {
+  resize: none;
+  height: 100%;
+}
+
+#cta .container .cta-info .cta-form .form-group-left .form-group .error-text,
+#cta .container .cta-info .cta-form .form-group .error-text {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#cta .container .cta-info .cta-form button {
+  grid-column: span 2;
+  width: 100%;
+  padding: 10px;
+  color: var(--primary-black-color);
+  border: 2px solid var(--primary-gold-color);
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: transparent;
+}
+
+#cta .container .cta-info .cta-form button:hover {
+  border: 3px solid var(--primary-gold-color);
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+#cta .container .cta-info .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cta .container .cta-info .footer .image-logo {
+  width: 120px;
+  height: 120px;
+  margin-top: 40vh;
+  margin-bottom: 5px;
+}
+
+#cta .container .cta-info .footer p {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#cta .container .cta-info .footer p:first-of-type {
+  margin-top: 5px;
+}
+
+#cta .container .cta-info .footer p:not(:first-of-type) {
+  margin-bottom: 20vh;
+}

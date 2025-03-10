@@ -1,0 +1,22 @@
+:root {
+  --primary-gold-color: rgba(157, 137, 113, 0.9);
+  --primary-black-color: rgb(0, 0, 0);
+  --primary-white-color: rgb(255, 255, 255);
+
+  --hover-color: rgb(34, 115, 208);
+  --error-color: rgb(201, 77, 77);
+  
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Arial', sans-serif;
+    
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --font-size-super-large: 24px;
+  --font-size-extra-large: 30px;
+
+  --padding-small: 8px;
+  --padding-medium: 16px;
+  --padding-large: 24px;
+}
+  

@@ -1,0 +1,71 @@
+@import '../../styles/variables.css';
+
+#careers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+}
+
+#careers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#careers .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#careers .wide {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+#careers .small {
+  grid-column: 1;
+}
+
+#careers .large {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
+#careers .image-container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#careers .image-container .overlay {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: var(--primary-gold-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-white-color);
+  font-size: var(--font-size-super-large);
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transform: scaleX(0) rotateY(90deg);
+  transform-origin: center;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+#careers .image-container:hover .overlay {
+  opacity: 1;
+  transform: scaleX(1) rotateY(0);
+}
+
+#careers .image-container .overlay h2 {
+  margin: 0;
+  width: 60%;
+  color: var(--primary-white-color);
+}
