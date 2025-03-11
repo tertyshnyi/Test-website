@@ -1,5 +1,3 @@
-@import '../../styles/variables.css';
-
 #cta {
   position: relative;
   height: auto;
@@ -86,10 +84,11 @@
 }
   
 #cta .container .cta-header h1 {
-  font-size: 30px;
+  font-size: 40px;
   margin: 0;
   padding: 0;
   color: var(--primary-black-color);
+  font-family: 'MostraNuova-Bold', sans-serif;
 }
   
 #cta .container .cta-header h6 {
@@ -98,6 +97,8 @@
   padding: 0;
   padding-bottom: 15px;
   color: var(--primary-black-color);
+  font-family: 'MostraNuova-Light', sans-serif;
+  letter-spacing: 4px;
 }
 
 #cta .container .cta-info {
@@ -119,10 +120,12 @@
 
 #cta .container .cta-info p {
   color: var(--primary-black-color);
+  font-family: 'MostraNuova-Bold', sans-serif;
 }
 
 #cta .container .cta-info p em {
   color: var(--primary-gold-color);
+  font-style: normal;
 }
 
 #cta .container .cta-info .line {
@@ -177,6 +180,11 @@
   transition: border 0.3s;
 }
 
+#cta .container .cta-info .cta-form .form-group-left .form-group input::placeholder,
+#cta .container .cta-info .cta-form .form-group textarea::placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+}
+
 #cta .container .cta-info .cta-form .form-group-left .form-group input {
   border-left: none;
   border-top: none;
@@ -211,6 +219,7 @@
   cursor: pointer;
   transition: background 0.3s;
   background-color: transparent;
+  font-family: 'MyriadPro-Regular', sans-serif;
 }
 
 #cta .container .cta-info .cta-form button:hover {
@@ -238,6 +247,8 @@
   margin: 0;
   font-size: 12px;
   font-weight: 500;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  letter-spacing: 1px;
 }
 
 #cta .container .cta-info .footer p:first-of-type {
@@ -272,4 +283,57 @@
     margin-top: 25px;
   }
 
+}
+
+@media (max-width: 640px) {
+  #cta .circle-background {
+    left: -189px;
+    top: -1222px;
+    right: 153px;
+    bottom: 263px;
+    background-size: 500px 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  #cta .circle-background {
+    top: -1138px;
+    right: -83px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #cta .container {
+    margin-top: 25%;
+  }  
+}
+
+@media (max-width: 810px) {
+  #cta .container {
+    margin-top: 35%;
+  }  
+}
+
+@media (max-width: 650px) {
+  #cta .container {
+    margin-top: 50%;
+  }  
+}
+
+@media (max-width: 480px) {
+  #cta .container {
+    margin-top: 60%;
+  }  
+}
+
+@media (max-width: 420px) {
+  #cta .container {
+    margin-top: 70%;
+  }  
+}
+
+@media (max-width: 370px) {
+  #cta .container {
+    margin-top: 80%;
+  }  
 }

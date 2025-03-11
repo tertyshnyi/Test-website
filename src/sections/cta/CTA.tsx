@@ -94,7 +94,7 @@ const CTA: React.FC = () => {
           <Ornament />
         </div>
         <div className="cta-info" ref={ctaInfoRef}>
-          <p>ADDRESA <em>LEVOCSKA 5, PRESOV, 080 01</em></p>
+          <p>ADRESA <em>LEVOCSKA 5, PRESOV, 080 01</em></p>
           <p>TELEFON <em>+421 905 181 972</em></p>
           <p>MESTO <em>PRESOV / SLOVAKIA</em></p>
           <div className="line"></div>

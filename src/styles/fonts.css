@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'MostraNuova-Bold';
+  src: url('/public/elements/fonts/MostraNuova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MostraNuova-Light';
+  src: url('/public/elements/fonts/MostraNuova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: 'MostraNuova-Regular';
+  src: url('/public/elements//fonts/MostraNuova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: 'MyriadPro-It';
+  src: url('/public/elements/fonts/MyriadPro-It.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('/public/elements/fonts/MyriadPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-LightIt';
+  src: url('/public/elements/fonts/MyriadPro-LightIt.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('/public/elements/fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

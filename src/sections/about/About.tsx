@@ -83,7 +83,7 @@ const About: React.FC = () => {
           </div>
           <div className="about-info-desc">
             <h3>INŠPIROVANÝ HISTÓRIOU</h3>
-            <p>
+            <p className="text-info">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas <em>inventore</em>
               non vero odio atque totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
               unde suscipit expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam 
@@ -93,7 +93,7 @@ const About: React.FC = () => {
               voluptates, corrupti sint nemo unde suscipit expedita.
             </p>
             <br/>
-            <p>
+            <p className="text-info">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
               non vero odio <em>inventore</em> totam quam perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
               unde suscipit expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam 
@@ -104,7 +104,7 @@ const About: React.FC = () => {
             </p>
 
             <h3>VÍZIA A POSLANIE</h3>
-            <p>
+            <p className="text-info">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
               non vero odio atque totam quam perspiciatis, maiores recusandae alias <em>inventore</em>, corrupti sint nemo 
               unde <em>inventore</em> expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam 
@@ -114,7 +114,7 @@ const About: React.FC = () => {
               voluptates, corrupti sint <em>inventore</em> unde suscipit expedita.
             </p>
             <br/>
-            <p>
+            <p className="text-info">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam quas inventore 
               non vero odio atque totam <em>inventore</em> perspiciatis, maiores recusandae alias voluptates, corrupti sint nemo 
               unde suscipit expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nihil. Quisquam 
