@@ -77,7 +77,6 @@ const About: React.FC = () => {
                   alt="Triangle top"
                   className="svg-image"
                 />
-
                 <img src={image.src} alt={image.alt} className="image" />
               </div>
             ))}

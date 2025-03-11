@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link } from "react-scroll";
+import { Link, scroller } from "react-scroll";
 import MenuIcon from "../../components/MenuIcon";
 
 const imagesData = [
@@ -87,11 +87,19 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
       </nav>
-
       <div className={`full-menu ${menuOpen ? "open" : ""}`}>
-        <button className="close-btn-2" onClick={() => setMenuOpen(false)}>
-          <p>MENU</p>
-        </button>
+      <button
+        className="close-btn-2"
+        onClick={() => {
+          scroller.scrollTo('menu', {
+            smooth: true,
+            duration: 300,
+          });
+          setMenuOpen(false);
+        }}
+      >
+        <p>MENU</p>
+      </button>
         <button className="close-btn-1" onClick={() => setMenuOpen(false)}>
           <MenuIcon className="custom-menu-icon" />
         </button>
@@ -118,6 +126,7 @@ const Navbar: React.FC = () => {
           ))}
         </div>
       </div>
+    
     </>
   );
 };

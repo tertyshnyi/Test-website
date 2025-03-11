@@ -83,6 +83,8 @@ const CTA: React.FC = () => {
 
   return (
     <section id="cta">
+      <div className="circle-background"></div>
+  <div className="contact-background"></div>
       <div className="container">
         <MenuIcon />
         <div className="cta-header">

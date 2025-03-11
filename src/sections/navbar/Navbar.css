@@ -69,11 +69,12 @@
   width: 60px;
   height: 2px;
   background-color: var(--primary-gold-color);
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, width 0.3s ease;
 }
 
 .navbar .nav-list li.active::before {
   height: 4px;
+  width: 100px;
 }
 
 .navbar .nav-list li:first-child::before,

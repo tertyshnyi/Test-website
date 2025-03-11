@@ -141,6 +141,13 @@ const Requirements: React.FC = () => {
 
   return (
     <section id="requirements">
+      <div className="needs-background"></div>
+      <div className="head-svg"></div>
+      <div className="circle-svg"></div>
+      <div className="title-container">
+        <h1 className="title-h1">LEONIDES</h1>
+        <p className="title-p">Transform your life!</p>
+      </div>
       <div className="container">
         <MenuIcon />
         <div className="requirements-header">
@@ -163,7 +170,17 @@ const Requirements: React.FC = () => {
                     <h3>{image.title}</h3>
                     <div className="line"></div>
                   </div>
+                  <img
+                    src="/elements/images/triangle.svg"
+                    alt="Triangle top"
+                    className="svg-image-1"
+                  />
                   <img src={image.src} alt={image.alt} className="image" />
+                  <img
+                    src="/elements/images/triangle.svg"
+                    alt="Triangle top"
+                    className="svg-image-2"
+                  />
                 </div>
             ))}
           </div>
